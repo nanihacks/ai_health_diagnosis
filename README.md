@@ -107,5 +107,5 @@ This project is open source under the MIT License.
 ## Contact
 
 For questions or support, contact:  
-**Praveen** – annampraveen2003.com  
+**Praveen** – annampraveen2003@gmail.com  
 GitHub: https://github.com/nanihacks/ai_health_diagnosis
