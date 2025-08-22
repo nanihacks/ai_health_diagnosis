@@ -1,0 +1,314 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #2d3748;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: 0 auto 60px;
+  background-color: #fff;
+  padding: 40px 45px;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Header styling */
+.header {
+  background: #2b6cb0; /* vibrant blue */
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 15px rgba(43,108,176,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.6s ease forwards;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: auto;
+  padding: 0 20px;
+}
+.nav-logo {
+  font-weight: 800;
+  font-size: 1.75rem;
+  letter-spacing: 2px;
+  color: white;
+  text-decoration: none;
+  user-select: none;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+.nav-links a {
+  color: #bee3f8;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #90cdf4;
+  transition: width 0.25s ease;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #ebf8ff;
+}
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+  width: 100%;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+  animation: slideInLeft 0.6s ease forwards;
+}
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #2c5282;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  transition: border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 2px 2px 8px rgba(0,0,0,0.03);
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #4299e1;
+  outline: none;
+  box-shadow: 0 0 8px rgba(66,153,225,0.6);
+}
+.error-text {
+  color: #f56565;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #3182ce;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 24px -4px rgba(49,130,206,0.6);
+  transition: background 0.4s ease, transform 0.25s ease;
+  display: inline-block;
+  user-select: none;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: #2b6cb0;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px -10px rgba(43,108,176,0.7);
+}
+
+.btn-secondary {
+  background: #718096;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  user-select: none;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+  background: #4a5568;
+}
+
+/* Cards & badges */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+.card {
+  flex: 1 1 280px;
+  padding: 40px 30px;
+  background: #e6f2ff;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #2b6cb0;
+  box-shadow: 0 20px 36px rgba(43,108,176,0.1);
+  text-decoration: none;
+  transition: box-shadow 0.4s ease, background 0.3s ease;
+}
+.card:hover, .card:focus {
+  box-shadow: 0 30px 50px rgba(43,108,176,0.3);
+  background: #d3e9ff;
+}
+
+/* Result Card */
+.result-card {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 40px 45px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.1);
+  animation: fadeInDown 1s ease forwards;
+}
+.badge {
+  display: inline-block;
+  padding: 8px 22px;
+  border-radius: 24px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+.badge-low {
+  background: #38a169;
+  text-shadow: 0 1.5px 4px rgba(0,0,0,0.15);
+}
+.badge-medium {
+  background: #d69e2e;
+  color: #1a202c;
+  text-shadow: none;
+}
+.badge-high {
+  background: #e53e3e;
+  text-shadow: 0 1.5px 5px rgba(0,0,0,0.2);
+}
+
+/* Inputs List */
+.input-list {
+  margin-top: 25px;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+.input-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ebf4ff;
+  transition: background 0.3s ease;
+}
+.input-list li:hover {
+  background: #bee3f8;
+  border-radius: 8px;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 80px;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+/* Inputs error highlight */
+.input-error {
+  border-color: #e53e3e !important;
+  background-color: #fff5f5;
+  transition: background-color 0.5s ease;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .container {
+    padding: 25px 20px;
+    margin: 15px;
+  }
+}

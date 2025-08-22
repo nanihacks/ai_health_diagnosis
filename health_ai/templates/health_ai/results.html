@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Prediction Results{% endblock %}
+{% block content %}
+<h2>{{ disease_type|title }} Risk Assessment Result</h2>
+<p><strong>Risk Level:</strong> {{ result.risk_level }}</p>
+<p><strong>Probability:</strong> {{ result.probability|floatformat:2 }}</p>
+<p><strong>Recommendation:</strong> {{ result.recommendation }}</p>
+
+<h3>Your Inputs</h3>
+<ul>
+    {% for key, value in input_data.items %}
+        <li>{{ key|title|default:key }}: {{ value }}</li>
+
+    {% endfor %}
+</ul>
+
+<a href="{% url 'health_ai:index' %}" class="btn btn-secondary">Back to Home</a>
+{% endblock %}

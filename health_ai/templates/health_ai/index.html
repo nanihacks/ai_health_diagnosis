@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>Welcome to AI Health Diagnosis System</h1>
+<p>Select a health assessment:</p>
+<ul>
+    <li><a href="{% url 'health_ai:diabetes_prediction' %}">Diabetes Risk Assessment</a></li>
+    <li><a href="{% url 'health_ai:heart_prediction' %}">Heart Disease Risk Assessment</a></li>
+    <li><a href="{% url 'health_ai:alzheimer_prediction' %}">Alzheimer's Risk Assessment</a></li>
+</ul>
+{% endblock %}

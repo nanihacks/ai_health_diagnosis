@@ -1,0 +1,13 @@
+Django
+tensorflow
+pandas
+numpy
+scikit-learn
+matplotlib
+plotly
+seaborn
+python-decouple
+gunicorn
+whitenoise
+joblib
+
